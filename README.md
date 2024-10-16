@@ -1,6 +1,7 @@
 Запуск проекта:
-- docker compose up --build
-- http://localhost:8000/docs/ (документация swagger)
+- создать .env файл из .env.template (шаблона)
+- создать и запустить контейнер docker compose up --build
+- открыть документацию http://localhost:8000/docs/ (документация swagger)
 
 
 Запуск тестов:
