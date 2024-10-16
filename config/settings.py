@@ -21,15 +21,11 @@ env.read_env()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-!etm^9b=$lo4v9vavo77!yl*7*-nz#)u80ch&&du+ymjj-4xco"
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+API_KEY = os.environ.get("API_KEY")
+SECRET_KEY = env.str("SECRET_KEY")
+PROJECT_NAME = os.environ.get("PROJECT_NAME")
+DEBUG = env.bool("DEBUG", default=False)
+DOMAIN = os.environ.get("DOMAIN")
 
 ALLOWED_HOSTS = []
 AUTH_USER_MODEL = "users.User"
